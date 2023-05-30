@@ -1,15 +1,15 @@
-import java.util.Arrays;
+import domain.MatrixProcessor;
 
 public class Main {
-
     public static void main(String[] args) {
-        int [][] matrix = new int[3][3];
-        int x=0;
+        int[][] matrix = {
+            {5, 9, 2},
+            {3, 8, 1},
+            {4, 7, 6}
+        };
 
-        for(int[] row:matrix)
-            Arrays.fill(row,x);
-
-        for(int[] row:matrix)
-            System.out.println(Arrays.toString(row));
+        MatrixProcessor processor = new MatrixProcessor();
+        int secondLargest = processor.findSecondLargest(matrix);
+        System.out.println("The second largest number in the matrix is: " + secondLargest);
     }
 }
